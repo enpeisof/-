@@ -2,7 +2,7 @@
 $user = "localhost";
 $name = "root";
 $password = "";
-$db ="gdepmec2023/2024";
+$db ="gdepinfo";
 
 
 
