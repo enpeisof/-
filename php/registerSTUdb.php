@@ -1,16 +1,19 @@
 <?php
-   $id=$_POST['id'];
+  
    $fname=$_POST['fname'];
    $fmname=$_POST['fmname'];
-   $rank=$_POST['rank'];
+   $year=$_POST['year'];
    $email=$_POST['email'];
    $pass=$_POST['password'];
-   $position=$_POST['position'];
+   $groupe=$_POST['groupe'];
 
    include "connect.php";
 
-   $qry="INSERT INTO student (userId,password,nom,prenom,grade,poste,email) VALUES ($id,'$pass','$fname','$fmname','$rank','$position','$email')";
+   $qry="INSERT INTO student (password,fstname,fmlname,year,groupe,email) VALUES ('$pass','$fname','$fmname',$year,'$groupe','$email')";
    mysqli_query($connect,$qry);
-   header("location: ../registerSTU.php");
+
+   $last_id = $connect->insert_id;
+
+   header("location: ../registerSTU.php?id=$last_id");
 
 ?>

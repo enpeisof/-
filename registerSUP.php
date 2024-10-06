@@ -16,7 +16,7 @@
     <?php
     if (isset($_GET['id'])) {
         echo "<p>registered successfully!<br>";
-        echo "Student ID: " . htmlspecialchars($_GET['id']) . "</p>";
+        echo "Supervisor's ID: " . htmlspecialchars($_GET['id']) . "</p>";
     }
     ?>
       <div class="row d-flex justify-content-center align-items-center h-100">
