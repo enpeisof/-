@@ -71,8 +71,8 @@
               <br>
               <br>
 
-              <a href="registerSUP.php" class="btn btn-info" role="button">enter a student</a>
-              <a href="#" class="btn btn-info" role="button">enter a teacher</a>
+              <a href="registerSUP.php" class="btn btn-info" role="button">enter a supervisor</a>
+              <a href="registerTCH.php" class="btn btn-info" role="button">enter a teacher</a>
 
             </div>
           </div>

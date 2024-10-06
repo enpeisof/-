@@ -16,7 +16,7 @@
     <?php
     if (isset($_GET['id'])) {
         echo "<p>registered successfully!<br>";
-        echo "Supervisor's ID: " . htmlspecialchars($_GET['id']) . "</p>";
+        echo "Teaxher's ID: " . htmlspecialchars($_GET['id']) . "</p>";
     }
     ?>
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -24,10 +24,10 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-                <h3>supervisor</h3>
-              <form method="post" action="php/registerSUPdb.php">
+                <h3>teacher</h3>
+              <form method="post" action="php/registerTCHdb.php">
 
-                
+            
 
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="fname" />
@@ -45,6 +45,11 @@
                 </div>
 
                 <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" name="ac_grade" />
+                  <label class="form-label" for="form3Example4cdg">Academic grade</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
                   <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email" />
                   <label class="form-label" for="form3Example3cg">Email</label>
                 </div>
@@ -52,11 +57,6 @@
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="password" />
                   <label class="form-label" for="form3Example1cg">Password</label>
-                </div>
-
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" name="position" />
-                  <label class="form-label" for="form3Example4cdg">Position</label>
                 </div>
 
 
@@ -71,11 +71,10 @@
               <br>
               <br>
 
+              <a href="registerSUP.php" class="btn btn-info" role="button">enter a supervisor</a>
               <a href="registerSTU.php" class="btn btn-info" role="button">enter a student</a>
-              <a href="registerTCH.php" class="btn btn-info" role="button">enter a teacher</a>
 
             </div>
-            
           </div>
         </div>
       </div>
