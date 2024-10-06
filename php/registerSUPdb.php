@@ -1,5 +1,4 @@
 <?php
-   $id=$_POST['id'];
    $fname=$_POST['fname'];
    $fmname=$_POST['fmname'];
    $rank=$_POST['rank'];
@@ -9,8 +8,13 @@
 
    include "connect.php";
 
-   $qry="INSERT INTO supervisor (userId,password,nom,prenom,grade,poste,email) VALUES ($id,'$pass','$fname','$fmname','$rank','$position','$email')";
+   $qry="INSERT INTO supervisor (password,fstname,fmlname,rank,position,email) VALUES ('$pass','$fname','$fmname','$rank','$position','$email')";
    mysqli_query($connect,$qry);
-   header("location: ../registerSUP.php")
+   
+   $last_id = $connect->insert_id;
+
+   // Redirect to the form page and pass the new supervisor's ID in the query string
+   
+   header("location: ../registerSUP.php?id=$last_id");
 
 ?>

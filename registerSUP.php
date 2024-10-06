@@ -13,6 +13,12 @@
   style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
+    <?php
+    if (isset($_GET['id'])) {
+        echo "<p>registered successfully!<br>";
+        echo "Student ID: " . htmlspecialchars($_GET['id']) . "</p>";
+    }
+    ?>
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -21,10 +27,7 @@
                 <h3>supervisor</h3>
               <form method="post" action="php/registerSUPdb.php">
 
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="number" id="form3Example1cg" class="form-control form-control-lg" name="id" />
-                  <label class="form-label" for="form3Example1cg">identifier</label>
-                </div>
+                
 
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="fname" />
@@ -72,6 +75,7 @@
               <a href="#" class="btn btn-info" role="button">enter a teacher</a>
 
             </div>
+            
           </div>
         </div>
       </div>
